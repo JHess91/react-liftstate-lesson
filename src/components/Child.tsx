@@ -9,14 +9,13 @@ interface iProps {
 export default function Child({ money, setChildDeposit, setUser }: iProps) {
   const [form, setForm] = useState({})
 
-  console.log(form)
-
   const handleForm = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault()
     const target = e.target as HTMLInputElement
     setForm({...form, [target.name]: target.value})
   }
-  
+
+  console.log(form)
 
   return (
     <>
